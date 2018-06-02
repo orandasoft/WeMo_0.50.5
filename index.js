@@ -49,7 +49,8 @@ const controller = {
 
   switchSet: function switchSet(deviceid, value) {
     let client = clientByDeviceId(deviceid);
-    client.setBinaryState(value === 'true' ? 1 : 0)
+    console.log('[CONTROLLER].switchSet', deviceid, value);
+    client.setBinaryState(value === true ? 1 : 0)
   },
 
   switchGet: function switchGet(deviceid) {
